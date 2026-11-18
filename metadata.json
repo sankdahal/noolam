@@ -1,0 +1,6 @@
+{
+  "name": "NOOLAM — Pure Kanchipuram & Heritage Silk Sarees",
+  "description": "Luxury Indian silk saree house bringing handwoven Kanjivaram, Banarasi, and Koorai heritage textiles from temple looms to contemporary wardrobes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

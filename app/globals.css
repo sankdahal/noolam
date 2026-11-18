@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --noolam-burgundy: #5C0F1C;
+  --noolam-burgundy-deep: #3D0811;
+  --noolam-burgundy-hover: #480B15;
+  --noolam-ivory: #FAF6F0;
+  --noolam-cream: #F3ECE1;
+  --noolam-card: #FDFBF7;
+  --noolam-gold: #B89246;
+  --noolam-gold-light: #D4B06A;
+  --noolam-ink: #1E1714;
+  --noolam-muted: #6E5A4F;
+  --noolam-border: #E4D9C8;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--noolam-ivory);
+  color: var(--noolam-ink);
+}
+
+body {
+  background-color: var(--noolam-ivory);
+  color: var(--noolam-ink);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-editorial {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle horizontal scrollbar for lookbook & silk carousels */
+.noolam-scroll::-webkit-scrollbar {
+  height: 5px;
+}
+
+.noolam-scroll::-webkit-scrollbar-track {
+  background: #EFE7DA;
+}
+
+.noolam-scroll::-webkit-scrollbar-thumb {
+  background: #C4B097;
+}
+
+.noolam-scroll::-webkit-scrollbar-thumb:hover {
+  background: #5C0F1C;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
