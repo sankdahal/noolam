@@ -39,7 +39,7 @@ export default function ProductCard({ product, className }: ProductCardProps) {
         },
       }}
       className={cn(
-        'group flex flex-col border border-[#E4D9C8] bg-[#FDFBF7] transition-colors duration-300 hover:border-[#B89246]',
+        'group flex flex-col overflow-hidden rounded-2xl border border-[#E4D9C8] bg-[#FDFBF7] transition-colors duration-300 hover:border-[#B89246]',
         className
       )}
     >

@@ -96,7 +96,7 @@ export default function StoreSection() {
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.14, ease: EASE_MICRO }}
               onClick={() => setStoreModalOpen(true)}
-              className="group inline-flex min-h-[44px] items-center gap-2.5 bg-[#5C0F1C] px-7 py-3.5 text-xs font-medium uppercase tracking-[0.16em] text-[#FAF6F0] transition-colors duration-200 hover:bg-[#480B15]"
+              className="group inline-flex min-h-[44px] items-center gap-2.5 rounded-full bg-[#5C0F1C] px-7 py-3.5 text-xs font-medium uppercase tracking-[0.16em] text-[#FAF6F0] transition-colors duration-200 hover:bg-[#480B15]"
             >
               Visit the Store
               <ArrowRight
@@ -110,7 +110,7 @@ export default function StoreSection() {
         {/* Right: Boutique Interior Photograph */}
         <EditorialMaskReveal
           delay={0.1}
-          className="group relative aspect-[16/10] w-full border border-[#D8CBB8] bg-[#FAF6F0] lg:col-span-7 lg:aspect-auto lg:min-h-[460px]"
+          className="group relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-[#D8CBB8] bg-[#FAF6F0] lg:col-span-7 lg:aspect-auto lg:min-h-[460px]"
         >
           <BrandImage
             src="/images/hero-showroom.jpg"

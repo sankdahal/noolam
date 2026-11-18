@@ -53,8 +53,28 @@ body {
   background: #5C0F1C;
 }
 
+@keyframes noolam-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-noolam-marquee {
+  animation: noolam-marquee 34s linear infinite;
+}
+
+.group\/marquee:hover .animate-noolam-marquee {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .animate-noolam-marquee {
+    animation: none;
   }
 }

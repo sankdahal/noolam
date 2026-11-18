@@ -1,4 +1,5 @@
 import React from 'react';
+import SilkCurtainIntro from '@/components/SilkCurtainIntro';
 import HeroSection from '@/components/home/HeroSection';
 import EditorialIntroSection from '@/components/home/EditorialIntroSection';
 import TryTheLookSection from '@/components/home/TryTheLookSection';
@@ -12,6 +13,7 @@ import StoreSection from '@/components/home/StoreSection';
 export default function HomePage() {
   return (
     <>
+      <SilkCurtainIntro />
       <HeroSection />
       <EditorialIntroSection />
       <TryTheLookSection />
