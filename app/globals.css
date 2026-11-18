@@ -4,7 +4,7 @@
   --noolam-burgundy: #5C0F1C;
   --noolam-burgundy-deep: #3D0811;
   --noolam-burgundy-hover: #480B15;
-  --noolam-ivory: #FAF6F0;
+  --noolam-ivory: #FAF8F4;
   --noolam-cream: #F3ECE1;
   --noolam-card: #FDFBF7;
   --noolam-gold: #B89246;
@@ -30,6 +30,19 @@ body {
 
 .font-editorial {
   font-family: var(--font-serif), Georgia, serif;
+}
+
+.font-display-sans {
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.025em;
+}
+
+.font-editorial-accent {
+  font-family: var(--font-serif), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--noolam-burgundy);
 }
 
 .tabular-nums {

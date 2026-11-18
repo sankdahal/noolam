@@ -21,7 +21,7 @@ const cormorant = Cormorant_Garamond({
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
+  weight: ['300', '400', '500', '600'],
   variable: '--font-sans',
   display: 'swap',
 });
@@ -56,7 +56,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${jakarta.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[#FAF6F0] text-[#1E1714]" suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col bg-[#FAF8F4] text-[#1E1714]" suppressHydrationWarning>
         <MotionConfig reducedMotion="user">
           <StoreProvider>
             <Navbar />

@@ -55,10 +55,11 @@ export function EditorialMaskReveal({
 }
 
 interface SectionRevealHeaderProps {
-  eyebrow: string;
+  eyebrow?: string;
   title: React.ReactNode;
   description?: string;
   align?: 'left' | 'center';
+  showRule?: boolean;
   eyebrowClassName?: string;
   titleClassName?: string;
   descriptionClassName?: string;
@@ -70,6 +71,7 @@ export function SectionRevealHeader({
   title,
   description,
   align = 'left',
+  showRule = false,
   eyebrowClassName,
   titleClassName,
   descriptionClassName,
@@ -80,7 +82,7 @@ export function SectionRevealHeader({
   if (prefersReduced) {
     return (
       <div className={cn(align === 'center' && 'text-center', className)}>
-        <p className={eyebrowClassName}>{eyebrow}</p>
+        {eyebrow && <p className={eyebrowClassName}>{eyebrow}</p>}
         <h2 className={titleClassName}>{title}</h2>
         {description && <p className={descriptionClassName}>{description}</p>}
       </div>
@@ -100,34 +102,38 @@ export function SectionRevealHeader({
       }}
       className={cn(align === 'center' && 'text-center', className)}
     >
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 10 },
-          visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.55, ease: EASE_EDITORIAL },
-          },
-        }}
-        className={cn(
-          'inline-flex items-center gap-3',
-          align === 'center' && 'justify-center'
-        )}
-      >
-        <span className={eyebrowClassName}>{eyebrow}</span>
-        <motion.span
-          aria-hidden="true"
+      {eyebrow && (
+        <motion.div
           variants={{
-            hidden: { scaleX: 0, opacity: 0 },
+            hidden: { opacity: 0, y: 10 },
             visible: {
-              scaleX: 1,
-              opacity: 0.65,
-              transition: { duration: 0.65, delay: 0.1, ease: EASE_EDITORIAL },
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.55, ease: EASE_EDITORIAL },
             },
           }}
-          className="hidden h-[1px] w-8 origin-left bg-[#B89246] sm:inline-block"
-        />
-      </motion.div>
+          className={cn(
+            'inline-flex items-center gap-3',
+            align === 'center' && 'justify-center'
+          )}
+        >
+          <span className={eyebrowClassName}>{eyebrow}</span>
+          {showRule && (
+            <motion.span
+              aria-hidden="true"
+              variants={{
+                hidden: { scaleX: 0, opacity: 0 },
+                visible: {
+                  scaleX: 1,
+                  opacity: 0.65,
+                  transition: { duration: 0.65, delay: 0.1, ease: EASE_EDITORIAL },
+                },
+              }}
+              className="hidden h-[1px] w-8 origin-left bg-[#B89246] sm:inline-block"
+            />
+          )}
+        </motion.div>
+      )}
 
       <div className="overflow-hidden">
         <motion.h2
